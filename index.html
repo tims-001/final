@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/kimeiga/bahunya/dist/bahunya.min.css"
+    />
+
+    <title>Board Game</title>
+    <hr />
+    <style>
+            #mySidenav a {
+        position: absolute;
+        left: -80px;
+        transition: 0.3s;
+        padding: 15px;
+        width: 100px;
+        text-decoration: none;
+        font-size: 10px;
+        color: white;
+        border-radius: 0 5px 5px 0;
+      }
+
+      #mySidenav a:hover {
+        left: 0;
+      }
+
+      #a {
+        top: 20px;
+        background-color: #aa0486;
+      }
+
+      #i {
+        top: 80px;
+        background-color: #f36721;
+      }
+
+      #r {
+        top: 140px;
+        background-color: #f44336;
+      }
+      #JONL{
+
+      }
+      .imge{
+        float: left;
+        margin: 39px;
+        width:400px;
+
+      }
+      .p1{
+        font-family: "Courier New", Courier, monospace;
+      }
+      .p2{
+        font-family: "Courier New", Courier, monospace;
+        text-align: justify;
+      }
+      input, textarea, select, button
+      {
+       width : 200px;
+       margin: 10;
+       box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <div style="margin-left:80px;">
+    <body>
+      <main>
+        <h1>SCRABble!</h1>
+        <hr />
+        <!--creating a navigation bar -->
+        <div id="mySidenav" class="sidenav">
+          <a href="info.html" id="a">Information</a>
+          <a href="review.html" id="i">Reviews</a>
+          <a href="about.html" id="r">About</a>
+        </div>
+
+        <p class="p1">
+          Scrabble is a word game for two to four players in which points are
+          scored by placing tiles with single letters onto a playing board
+          divided into 1515 squares. The tiles must create words that are
+          contained in a standard dictionary or lexicon and read left to right
+          in rows or downward in columns in a crossword format.
+        </p>
+        <img class="imge" src="3.jpg" alt="Scrabble Board Game" />
+
+        <hr />
+
+        <p class="p2">
+          Alfred Mosher Butts, an American architect, devised the game in 1938.
+          Hasbro manufactures Scrabble in the United States and Canada under the
+          names of both of its companies, Milton Bradley and Parker Brothers.
+          Outside of the United States and Canada, Mattel holds the rights to
+          produce Scrabble. The game is offered in 121 countries and is
+          available in over 30 languages; around 150 million sets have been sold
+          globally, and approximately one-third of American and half of British
+          households own a Scrabble set.There are over 4,000 Scrabble clubs
+          worldwide.
+        </p>
+        <hr />
+        <video controls src="V1.mp4" poster="1.jpg" type="video/mp4">
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+
+        <!-- adding a sign up form for the clients on the website -->
+        <footer>
+          <hr />
+          <h2 id="JONL">Join The Newsletter</h2>
+          <form action="https://httpbin.org/post" method="post">
+            <label for="email">email address for newsletter:</label>
+            <input type="email" id="email" name="email" required />
+            <input type="hidden" id="name" name="name" value="smit" />
+            <button type="submit">Join</button>
+          </form>
+        </footer>
+      </main>
+    </body>
+  </div>
+</html>
