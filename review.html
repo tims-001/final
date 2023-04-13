@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reviews</title>
+    <meta charset = "UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0"/>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/kimeiga/bahunya/dist/bahunya.min.css" />
+    <style>
+      
+      .card {
+        border: 1px solid #6c0b0b;
+        padding: 10px;
+        margin: 10px;
+        background-color: #f5f5f5;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+      }
+      .card name {
+        color: black;
+        font-size: 20px;
+        
+      }
+      .card r {
+        color:black;
+        font-size: 25px; 
+        margin-top: 10  
+      }
+      .card h4{
+        color: black;
+
+      }
+      .card para {
+        color: grey;
+        font-size: 20px;
+      
+      }
+      input, textarea, select, button
+      {
+       width : 200px;
+       margin: 10;
+       box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" style="margin-right: 2px;">Home</a>
+        <a href="info.html" style="margin-left: 60px;">Information</a>
+        <a href="about.html" style="margin-left: 60px;">About</a>
+    </nav>
+    </header>
+    <h1>Reviews - ScrabBle</h1>
+    
+    <div id="containerreview">
+      <!-- generating reviews dynamically -->
+    </div>
+    
+    <script>
+      window.reviews = [
+{ 
+    name: "Divyraj Shah",
+    date: "12/04/23",
+    rating: 4,
+    text: "The game is mind-blowing.Found it tough in the starting but its pretty much challenging.",
+},
+{
+    name: "Riple Kuvadiya",
+    date: "12/04/23",
+    rating: 5,
+    text: "i loved this game.Playing it since childhood.Challenge you to defeat me!!",
+},
+{
+    name: "Abhay Thakur",
+    date: "10/04/23",
+    rating: 3,
+    text: "The game is hard.Personally, what i think is to increase vocabulary, we can read novels because there is a story in it and it also increases creativity.",
+},
+
+{
+    name: "Lakshay Singhania",
+    date: "11/04/23",
+    rating: 1,
+    text: "I am not interested in such games. I love virtual games like pubg,fortnite and so may which are so exciting and so cool.",
+},            
+{
+    name: "Mehr Panchal",
+    date: "12/04/23",
+    rating: 5,
+    text: "It's one of my favourite game because i love creating new words and using it in new sentences.",
+},
+]
+
+
+
+      
+      var reviewsContainer = document.getElementById("containerreview");
+      for (var i = 0; i < reviews.length; i++) { //using a loop to go through each review and then display them as a card
+        var review = reviews[i];
+        var card = document.createElement("div");
+        card.className = "card";
+        var names = document.createElement("name");// heading name is created for the card to display text
+        names.innerHTML = review.name;
+        card.appendChild(names);
+        var date = document.createElement("h4"); //heading h4 is created to display date and rating
+        date.innerHTML = review.date;
+        card.appendChild(date);
+         var rating = document.createElement("r");//making an element r for the rating
+        rating.innerHTML = review.rating + "  ";
+        card.appendChild(rating);
+        var text = document.createElement("para");// making a element para for the review text
+        text.innerHTML = review.text;
+        card.appendChild(text);
+       reviewsContainer.appendChild(card);// appending the card to the container created
+      }
+    </script>
+    <!-- form for adding new reviews -->
+<form>
+  <label for="name">Name:</label>
+  <input type="text" id="name" required>
+  <label for="date">Date:</label>
+  <input type="date" id="date" required>
+  <label for="review">Text:</label>
+  <input type="text" id="review" required>
+  <label for="rating">Rating:</label>
+  <select id="rating" required>
+    <option value="1"></option>
+    <option value="2"></option>
+    <option value="3"></option>
+    <option value="4"></option>
+    <option value="5"></option>
+  </select>
+      <button type="submit">create</button>
+      </form>
+      
+  </body>
+</html>
